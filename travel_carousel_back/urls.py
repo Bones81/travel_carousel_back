@@ -21,6 +21,6 @@ from django.conf import settings
 from django.conf.urls import include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('photos_api/urls'))
+    path('', include('photos_api.urls')),
+    path('admin/', admin.site.urls)
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
